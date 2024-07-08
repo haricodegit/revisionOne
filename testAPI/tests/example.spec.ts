@@ -20,10 +20,6 @@ test.beforeEach(async({page}) => {
   // })
 
   await page.goto("https://conduit.bondaracademy.com/")
-  await page.getByText('Sign in').click()
-  await page.getByRole('textbox', {name: 'Email'}).fill('pwapitest@email.com')
-  await page.getByRole('textbox', {name: 'Password'}).fill('Welcome@123')
-  await page.getByRole('button').click()
 })
 
 test.skip('has title', async ({ page }) => {
@@ -72,7 +68,7 @@ test('Create Article', async({page, request}) => {
 
   const articleResponse = await page.waitForResponse('https://conduit-api.bondaracademy.com/api/articles/')
   const articleResponseBody = await articleResponse.json()
-  console.log(articleResponseBody);
+  // console.log(articleResponseBody);
   const slugId = articleResponseBody.article.slug
 
   await expect(page.locator('.article-page h1')).toContainText('Playwright is Awesome')
@@ -92,8 +88,22 @@ test('Create Article', async({page, request}) => {
   const deleteresponse = await request.delete(`https://conduit-api.bondaracademy.com/api/articles/${slugId}`, {
     headers: {
       Authorization: `Token ${assessToken}`
-  }    
+  }
   })
 
   expect(deleteresponse.status()).toEqual(204)
+})
+
+test('Mock custom tags on Home page', async({page}) => {
+  await page.route("*/**/api/tags", async route => {
+    await route.fulfill({
+      body: JSON.stringify(tags)
+    })
+  })
+  await page.waitForLoadState('networkidle')
+  await page.screenshot({path: 'tags.png'})
+
+  await page.locator('.article-preview h1').first().click()
+  await page.locator('a[href*="bondaracademy"]').first().click()
+  await expect(page).toHaveTitle('Bondar Academy. Advance your QA career. Playwright Online Course.')
 })

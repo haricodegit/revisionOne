@@ -10,8 +10,9 @@ function test() {
     var y = 20;
     console.log(y);
 }
-console.log(x);
+
 test()
+console.log(x);
 
 var pop = "hello js"
 function rel() {
@@ -21,12 +22,23 @@ function rel() {
 console.log(pop);
 rel()
 
-var flag = "hey naveen"
-var t1 = 4
+// var flag = "hey naveen"
+// var t1 = 4
+// if(t1 > 3) {
+//     var flag = "hi tom"
+// }
+// console.log(flag);
+
+console.log("-------------------------------");
+let flag = "hey naveen"
+let t1 = 4
 if(t1 > 3) {
-    var flag = "hi tom"
+    let flag = "modified ?"
+    // console.log(flag);
 }
 console.log(flag);
+
+console.log("-------------------------------");
 
 var browser = 'chrome'
 var browser = 'firefox'
