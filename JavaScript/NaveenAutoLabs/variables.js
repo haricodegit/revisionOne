@@ -34,7 +34,7 @@ let flag = "hey naveen"
 let t1 = 4
 if(t1 > 3) {
     let flag = "modified ?"
-    // console.log(flag);
+    console.log(flag);
 }
 console.log(flag);
 
@@ -46,7 +46,7 @@ browser = 'edge'
 console.log(browser);
 
 
-//let variable
+// let variable
 // scope -- block scoped
 // {}
 

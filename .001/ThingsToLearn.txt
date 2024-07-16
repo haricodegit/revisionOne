@@ -1,0 +1,13 @@
+Debugging in VS Code:
+https://code.visualstudio.com/docs/editor/debugging#_launch-versus-attach-configurations
+
+Udemy course on VS Code:
+https://www.udemy.com/course/mastering-visual-studio-code/?kw=visual+studio+code&src=sac&couponCode=THANKSLEARNER24
+https://www.udemy.com/course/learn-visual-studio-code-vscode-course/?kw=visual+studio+code&src=sac&couponCode=THANKSLEARNER24
+
+
+Step 1: JavaScript Basics to Advanced
+Step 2: Databases
+Step 3: Playwright
+Step 4: Git, Git Hub
+Step 5: Docker, CI CD etc

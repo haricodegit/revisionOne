@@ -1,19 +1,22 @@
 // 1. every method - every element in the array must satisfy the condition and returns boolean value
+console.log("1. every method - every element in the array must satisfy the condition and returns boolean value");
 let num = [1,2,3,4,51]
 let flag = num.every((e) => e < 10)
 console.log(flag);
 
 // 2. some method - atleast 1 element in the array must satisfy the condition and returns boolean value
+console.log("2. some method - atleast 1 element in the array must satisfy the condition and returns boolean value");
 let flag1 = num.some((e) => e > 50)
 console.log(flag1);
 
-// 3 find method - finds the element in the array that matches the condition and return its
-
-let numbers = [ 1,3,5,7,9,6 ]
-let evenNum = numbers.find((e) => e%2 === 0)
+// 3 find method - finds an element in the array that matches the condition and return its
+console.log("3. find method - finds an element in the array that matches the condition and return its --> single element");
+let numbers = [ 1,3,5,7,9,6,2,4 ]
+let evenNum = numbers.find((e) => e % 2 === 0)
 console.log("evenNum ", evenNum);
 
 // 4. indexOf method - return the index of the value provided
+console.log("4. indexOf method - return the index of the value provided");
 let fruits = ["apple", 'orange', 'bannana', 'kiwi', 'apple']
 
 let indexOfKiwi = fruits.indexOf('kiwi1')

@@ -17,14 +17,14 @@ hello(goodbye)
 // goodbye()
 
 
-function hello(callback){
+async function hello(callback){
     console.log("Hello");
-    wait()
+    await wait()
     callback()
     
 }
 
-function wait() {
+async function wait() {
     setTimeout(() => {
         console.log("wait");
     }, 3000);

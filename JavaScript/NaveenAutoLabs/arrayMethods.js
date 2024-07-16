@@ -8,10 +8,13 @@ let sum = numb.reduce((acc, num) => acc + num, 0)
 console.log(sum);
 
 // find out max number in the array using reduce method
+console.log("find out max number in the array using reduce method");
 
-let numbr = [1,20,300,4,5]
-// let maxi = numbr.reduce((max, n) => max > n, 0)
-// console.log(maxi);
+let numbr = [1000,20,300,4,5]
+let maxi = numbr.reduce((max, n) => (max > n) ? max : n , 0)
+console.log(maxi);
+
+console.log("----------DONE------------");
 
 let maxNum = numbr.reduce((max, num) => {
     if(num > max) {
@@ -25,8 +28,13 @@ console.log(maxNum);
 console.log("------------------------------------");
 
 // reduce method to find out Min number in the array
+console.log("reduce method to find out Min number in the array");
 
-let minArray = [1,2,-3,4,-5]
+let minArray = [-100,2,-3,4,-5]
+
+const TernaryMin = minArray.reduce((min, n) => (min < n) ? min : n, 0)
+console.log("TernaryMin", TernaryMin);
+console.log("-----------------------");
 
 let minNum = minArray.reduce((min, num) => {  // min = 1, num = 1
     if(num < min){
@@ -43,7 +51,7 @@ console.log("------------------------------------");
 // console.log("1");
 // setTimeout(() => {
 //     console.log("2");
-// }, 0)
+// }, 3000)
 // console.log("3");
 
 console.log("--------------number1----------------------");
@@ -63,6 +71,8 @@ cartItems = [
 const totalPrice = cartItems.reduce((tol, item) => item.price + tol, 0)
 console.log(totalPrice);
 
+// cartItems.reduce()
+// number1.reduce()
 
 // 1. map
 
@@ -86,10 +96,13 @@ console.log(results);
 
 let num = [1,2,3,4,5,6,7,8,9,10]
 let evenNum = num.filter((e) => e % 2 == 0)
-console.log(evenNum);
+console.log("evenNum filter ",evenNum);
 
-let eveNumMap = num.map((e) => e % 2 == 0)
-console.log(eveNumMap);
+let eveNumMap = num.map((e) => (e % 2 == 0)? e : null)
+console.log("eveNumMap", eveNumMap);
+
+let eveNumMap1 = num.map((e) => e % 2 == 0)
+console.log("eveNumMap", eveNumMap1);
 
 employee = [
     {name: "Arun", age: 34, sex: "male"},

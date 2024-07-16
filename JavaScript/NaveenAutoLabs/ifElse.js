@@ -17,10 +17,10 @@ checkAge(0)
 
 function checkNumber(num) {
     if(num > 0) {
-        console.log(num+" number is positive");
+        console.log(num," number is positive");
     }
     else if(num < 0) {
-        console.log(num+ " number is negative");
+        console.log(num, " number is negative");
     } 
     else {
         console.log(num+ " number is zero");
